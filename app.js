@@ -1,5 +1,6 @@
 $(() => {
   // - code here
+
   $('form').on('submit', (event) => {
     event.preventDefault();
     const userInput = $('input[type="text"]').val();
@@ -10,31 +11,22 @@ $(() => {
       (data) => {
         console.log(data);
         let $error = $('<div>').text(data.message).appendTo('dl')
-
-        $('.wines')
+      $('.wines')
         .html(data.pairedWines);
-
-        $('.text')
+      $('.text')
         .html(data.pairingText);
-
-        $('.title')
+      $('.title')
         .html(data.productMatches['0']['title']);
-
-        $('.description')
+      $('.description')
         .html(data.productMatches['0']['description']);
-
-        $('.imageUrl')
+      $('.imageUrl')
         .attr('src', data.productMatches['0']['imageUrl']);
-
-        $('.price')
+      $('.price')
         .html(data.productMatches['0']['price']);
-
-        $('.link')
+      $('.link')
         .attr('href', data.productMatches['0']['link'])
         .text('link')
         .attr('target', '_blank');
-
-
       },
       (error) => {
       console.log('hello');
