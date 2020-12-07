@@ -31,6 +31,7 @@ $(() => {
 		}).then(
 			(data) => {
         console.log(data);
+        // - if/else statment to show error information inside the modal if API does not have wine information for use input
 				if ('status' in data) {
 					if (data.status == 'failure') {
 						$('.status').html(data.message).css('display', 'block'); // - show status div
@@ -39,13 +40,13 @@ $(() => {
 					}
 				}
 				else {
-					$('.status').html('').css('display', 'none'); // hide status div
+					$('.status').html('').css('display', 'none'); // - hide status div
 					$('.text').html(data.pairingText);
 					$('.title').html(data.productMatches['0']['title']);
 					$('.description').html(data.productMatches['0']['description']);
 					$('.imageUrl').attr('src', data.productMatches['0']['imageUrl']);
 					$('.price').html(data.productMatches['0']['price']);
-					$('.link').attr('href', data.productMatches['0']['link']).text('link').attr('target', '_blank');
+					$('.link').attr('href', data.productMatches['0']['link']).text('Buy Your Own Bottle').attr('target', '_blank');
 				}
 				$modal.css('display', 'block'); //update display to block AFTER updating the text.
 			},
