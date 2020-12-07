@@ -17,9 +17,9 @@ body {
   padding: 25px 32px;
 }
 
-/* .container {
-  padding: 4em;
-} */
+.container {
+
+}
 
 button {
   border: none;
@@ -98,22 +98,41 @@ form {
   cursor: pointer;
 }
 
+.status {
+  color: red; /* JV: distinguish error text from normal text somehow */
+  margin: 2em;
+}
+
 .wines {
+  align-items: center;
+  text-align: center;
+  font-family: sans-serif;
+  color: #595959;
   margin: 2em;
   grid-column: 1|2;
 }
 
 .text {
+  font-size: 18px;
+  line-height: 1.7;
+  font-family: sans-serif;
+  color: #595959;
   margin: 2em;
   grid-column: 1|2;
 }
 
 .title {
+  font-size: 18px;
+  font-family: sans-serif;
+  color: #595959;
   margin: 2em;
   grid-column: 1|2;
 }
 
 .description {
+  font-size: 18px;
+  font-family: sans-serif;
+  color: #595959;
   margin: 2em;
   grid-column: 2|3;
 }
@@ -124,12 +143,18 @@ form {
 }
 
 .price {
-  margin: 2em;
+  font-size: 25px;
+  margin: 1em;
+  font-family: sans-serif;
+  color: #1a1a1a;
   grid-column: 2|3;
 }
 
 .link {
-  margin: 2em;
+  font-size: 25px;
+  margin: 1em;
+  font-family: sans-serif;
+  color: #1a1a1a;
   grid-column: 2|3;
 }
 
