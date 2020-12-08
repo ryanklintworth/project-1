@@ -182,15 +182,22 @@ form {
 
 @media (max-width: 1230px) {
   button {
+    display: flex;
+    flex-direction: column;
     border-radius: 20px;
-    font-size: 29px;
-    height: 90px;
+    font-size: 50px;
+    height: 180px;
+    margin: 2em;
   }
 
   input {
+    display: flex;
+    flex-direction: column;
     border-radius: 20px;
-    font-size: 29px;
-    height: 75px;
-    width: 369px;
+    font-size: 50px;
+    height: 180px;
+    width: 680px;
+    margin: 2em;
+
   }
 }
