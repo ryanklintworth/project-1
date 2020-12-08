@@ -1,6 +1,5 @@
 body {
-  font-family: sans-serif;
-  font: helvetica;
+  font-family: 'Work Sans', sans-serif;
   background-image: url("https://www.wine.com/content/media/jc70ljquxrra/5EQN5STOQoW2MCqKuWi2IC/2defecee36252f0f592a68bea5326df3/WineComSteakWine.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -21,37 +20,45 @@ body {
 
 }
 
-button {
-  border: none;
-  background-color: #f2f2f2;
-  color: grey;
-  border: 2px solid #e7e7e7;
-  width: 219px;
-  margin-top: 5px;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: linear gradient
-}
-
 input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-family: 'Work Sans', sans-serif;
+  border-radius: 20px;
   border: 4px;
   border-color: black;
   background-color: #f2f2f2;
   color: grey;
+  /* height: 55px; */
   border: 2px solid #e7e7e7;
-  width: 150px;
+  width: 12em;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 20px;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-family: 'Work Sans', sans-serif;
+  border: none;
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  color: grey;
+  /* height: 90px; */
+  width: 15em;
+  margin-top: 5px;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 form {
@@ -64,7 +71,6 @@ form {
 /* modal information */
 
 .modal {
-  display: grid;
   grid-template-columns: 50% 50%;
   background-color: rbga(0, 0, 0, 0.5);
   position: absolute;
@@ -81,8 +87,9 @@ form {
 .modalContent {
   width: 500px;
   background-color: white;
-  border-radius: 5px;
+  border-radius: 10px;
   text-align: center;
+  justify-content: center;
   padding: 2%;
   line-height: 120%;
   position: relative;
@@ -100,13 +107,18 @@ form {
 
 .status {
   color: red; /* JV: distinguish error text from normal text somehow */
-  margin: 2em;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 150%;
 }
 
 .wines {
   align-items: center;
   text-align: center;
-  font-family: sans-serif;
   color: #595959;
   margin: 2em;
   grid-column: 1|2;
@@ -115,7 +127,6 @@ form {
 .text {
   font-size: 18px;
   line-height: 1.7;
-  font-family: sans-serif;
   color: #595959;
   margin: 2em;
   grid-column: 1|2;
@@ -123,7 +134,6 @@ form {
 
 .title {
   font-size: 18px;
-  font-family: sans-serif;
   color: #595959;
   margin: 2em;
   grid-column: 1|2;
@@ -131,7 +141,6 @@ form {
 
 .description {
   font-size: 18px;
-  font-family: sans-serif;
   color: #595959;
   margin: 2em;
   grid-column: 2|3;
@@ -145,19 +154,43 @@ form {
 .price {
   font-size: 25px;
   margin: 1em;
-  font-family: sans-serif;
   color: #1a1a1a;
   grid-column: 2|3;
 }
 
 .link {
+  text-decoration: none;
   font-size: 25px;
   margin: 1em;
-  font-family: sans-serif;
-  color: #1a1a1a;
+  color: #333333;
   grid-column: 2|3;
 }
 
-.background-image {
-  margin: 2em;
+#preLoader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+#animaniacs {
+  width: 50px;
+}
+
+ /* making the site mobile friendly  */
+
+@media (max-width: 1230px) {
+  button {
+    border-radius: 20px;
+    font-size: 29px;
+    height: 90px;
+  }
+
+  input {
+    border-radius: 20px;
+    font-size: 29px;
+    height: 75px;
+    width: 369px;
+  }
 }
