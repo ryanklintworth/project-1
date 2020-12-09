@@ -16,10 +16,6 @@ body {
   padding: 25px 32px;
 }
 
-.container {
-
-}
-
 input {
   display: flex;
   justify-content: center;
@@ -85,7 +81,7 @@ form {
 }
 
 .modalContent {
-  width: 500px;
+  width: 800px;
   background-color: white;
   border-radius: 10px;
   text-align: center;
@@ -106,7 +102,7 @@ form {
 }
 
 .status {
-  color: red; /* JV: distinguish error text from normal text somehow */
+  color: red; /* distinguish error text from normal text  */
   font-family: 'Work Sans', sans-serif;
   font-size: 25px;
   position: absolute;
@@ -147,7 +143,6 @@ form {
 }
 
 .imageUrl {
-  /* margin: 2em; */
   grid-column: 2|3;
 }
 
